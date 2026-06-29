@@ -1,0 +1,40 @@
+﻿@model MovieDapperProject.Models.DirectorsModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+
+    <h3 class="mb-3">Director Form</h3>
+
+    <form method="post">
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label>First Name</label>
+            <input type="text" class="form-control" asp-for="FirstName" />
+        </div>
+
+        <div class="mb-3">
+            <label>Last Name</label>
+            <input type="text" class="form-control" asp-for="LastName" />
+        </div>
+
+        <div class="mb-3">
+            <label>Birth Date</label>
+            <input type="date" class="form-control" asp-for="BirthDate" />
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Save
+        </button>
+
+        <a href="/Directors/Index" class="btn btn-secondary">
+            Back
+        </a>
+
+    </form>
+
+</div>

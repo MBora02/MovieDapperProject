@@ -1,0 +1,67 @@
+﻿@model MovieDapperProject.Models.UsersModel
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Register</title>
+
+    <link href="~/adminkit/static/css/app.css" rel="stylesheet">
+</head>
+
+<body class="bg-light">
+
+    <div class="container d-flex justify-content-center align-items-center" style="height:100vh;">
+
+        <div class="card shadow-lg" style="width:420px; border-radius:12px;">
+
+            <div class="card-header text-center bg-white">
+                <h3 class="mb-0">Create Account</h3>
+                <small class="text-muted">MovieDapper System</small>
+            </div>
+
+            <div class="card-body p-4">
+
+                <form method="post">
+
+                    <div class="mb-3">
+                        <label class="form-label">User Name</label>
+                        <input asp-for="UserName" class="form-control" placeholder="Enter username" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Email</label>
+                        <input asp-for="Email" class="form-control" placeholder="Enter email" />
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label">Password</label>
+                        <input asp-for="PasswordHash" type="password" class="form-control" placeholder="Enter password" />
+                    </div>
+
+                    <button class="btn btn-success w-100 mt-2">
+                        Register
+                    </button>
+
+                </form>
+
+                <div class="text-center mt-3">
+                    <span class="text-muted">Already have an account?</span><br />
+                    <a href="/Users/Login" class="btn btn-link p-0">
+                        Login here
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>

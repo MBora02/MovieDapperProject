@@ -1,0 +1,57 @@
+﻿@model MovieDapperProject.Models.Reviews
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var movies = ViewBag.Movies as List<MovieDapperProject.Models.MoviesModel>;
+}
+
+<div class="container mt-3">
+
+    <h3>Review Form</h3>
+
+    <form method="post">
+
+        <input type="hidden" asp-for="Id" />
+
+        <!-- MOVIE -->
+        <div class="mb-3">
+            <label>Movie</label>
+            <select class="form-control" asp-for="MovieId">
+                <option value="">Select Movie</option>
+                @foreach (var m in movies)
+                {
+                    <option value="@m.Id">@m.Title</option>
+                }
+            </select>
+        </div>
+
+        <!-- USER -->
+        <div class="mb-3">
+            <label>User Name</label>
+            <input class="form-control" asp-for="UserName" />
+        </div>
+
+        <!-- RATING -->
+        <div class="mb-3">
+            <label>Rating (1-10)</label>
+            <input class="form-control" asp-for="Rating" />
+        </div>
+
+        <!-- COMMENT -->
+        <div class="mb-3">
+            <label>Comment</label>
+            <textarea class="form-control" asp-for="Comment"></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Save
+        </button>
+
+        <a href="/Reviews/Index" class="btn btn-secondary">
+            Back
+        </a>
+
+    </form>
+
+</div>

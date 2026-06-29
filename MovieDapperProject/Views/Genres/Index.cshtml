@@ -1,0 +1,39 @@
+﻿@model List<MovieDapperProject.Models.GenresModel>
+
+<div class="container mt-3">
+
+    <a href="/Genres/EY" class="btn btn-primary mb-3">
+        + Add Genre
+    </a>
+
+    <table class="table table-hover my-0">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th class="text-end">Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Name</td>
+
+                    <td class="text-end">
+                        <a href="/Genres/EY/@item.Id" class="btn btn-sm btn-warning">
+                            Edit
+                        </a>
+
+                        <a href="/Genres/Delete/@item.Id"
+                           class="btn btn-sm btn-danger"
+                           onclick="return confirm('Delete this genre?');">
+                            Delete
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+
+</div>

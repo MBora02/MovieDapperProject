@@ -1,0 +1,84 @@
+﻿@model MovieDapperProject.Models.MoviesModel
+
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+    var genres = ViewBag.Genres as List<MovieDapperProject.Models.GenresModel>;
+    var directors = ViewBag.Directors as List<MovieDapperProject.Models.DirectorsModel>;
+}
+
+<div class="container mt-3">
+
+    <h3>Movie Form</h3>
+
+    <form method="post">
+
+        <input type="hidden" asp-for="Id" />
+
+        <div class="mb-3">
+            <label>Title</label>
+            <input class="form-control" asp-for="Title" />
+        </div>
+
+        <div class="mb-3">
+            <label>Description</label>
+            <textarea class="form-control" asp-for="Description"></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label>Release Year</label>
+            <input class="form-control" asp-for="ReleaseYear" />
+        </div>
+
+        <div class="mb-3">
+            <label>Duration (min)</label>
+            <input class="form-control" asp-for="Duration" />
+        </div>
+
+        <div class="mb-3">
+            <label>Budget</label>
+            <input class="form-control" asp-for="Budget" />
+        </div>
+
+        <div class="mb-3">
+            <label>Revenue</label>
+            <input class="form-control" asp-for="Revenue" />
+        </div>
+
+        <!-- GENRE -->
+        <div class="mb-3">
+            <label>Genre</label>
+            <select class="form-control" asp-for="GenreId">
+                <option value="">Select Genre</option>
+                @foreach (var g in genres)
+                {
+                    <option value="@g.Id">@g.Name</option>
+                }
+            </select>
+        </div>
+
+        <!-- DIRECTOR -->
+        <div class="mb-3">
+            <label>Director</label>
+            <select class="form-control" asp-for="DirectorId">
+                <option value="">Select Director</option>
+                @foreach (var d in directors)
+                {
+                    <option value="@d.Id">
+                        @d.FirstName @d.LastName
+                    </option>
+                }
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-success">
+            Save
+        </button>
+
+        <a href="/MovieS/Index" class="btn btn-secondary">
+            Back
+        </a>
+
+    </form>
+
+</div>
