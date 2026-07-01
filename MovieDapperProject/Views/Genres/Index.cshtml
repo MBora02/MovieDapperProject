@@ -1,10 +1,18 @@
-﻿@model List<MovieDapperProject.Models.GenresModel>
+@model List<MovieDapperProject.Models.GenresModel>
 
 <div class="container mt-3">
 
-    <a href="/Genres/EY" class="btn btn-primary mb-3">
-        + Add Genre
-    </a>
+    <div class="mb-3">
+        <a href="/Genres/EY" class="btn btn-primary">
+            + Add Genre
+        </a>
+        <a href="/Genres/ExportToPdf" class="btn btn-danger ms-2">
+            <i class="fa fa-file-pdf"></i> PDF Olarak İndir
+        </a>
+        <a href="/Genres/ExportToExcel" class="btn btn-success ms-2">
+            <i class="fa fa-file-excel"></i> Excel Olarak İndir
+        </a>
+    </div>
 
     <table class="table table-hover my-0">
         <thead>
