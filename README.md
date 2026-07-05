@@ -36,14 +36,22 @@ A robust, enterprise-ready administration panel for movie catalog and review man
     *   **Excel Spreadsheets**: Auto-fit columns, styled headers, and clean structures using `EPPlus`.
 
 ### User Interface Previews
+#### 📂 Login Register Change Password
+<img width="500" height="517" alt="image" src="https://github.com/user-attachments/assets/2d4d93c8-a856-45a4-8d78-864be266a7dd" />
+<img width="581" height="567" alt="image" src="https://github.com/user-attachments/assets/c2ff9a58-41f9-461f-8912-9fdb05228290" />
+
+<img width="1871" height="725" alt="image" src="https://github.com/user-attachments/assets/fac0a903-2975-4d18-a16c-eec507febc3f" />
+
+
 
 #### 🖥️ Admin Dashboard
-![Dashboard (Live)](https://github-production-user-asset-62135c.s3.amazonaws.com/placeholder-dashboard.png)
-*Instruction: Upload a screenshot of the main analytics dashboard here showing movie metrics*
+<img width="1872" height="822" alt="image" src="https://github.com/user-attachments/assets/d19ef8fa-1542-4fc4-b1fc-9f1e08047960" />
+<img width="1877" height="781" alt="image" src="https://github.com/user-attachments/assets/f6ccf124-d02b-4cd8-8634-aeefab16df74" />
+<img width="1886" height="815" alt="image" src="https://github.com/user-attachments/assets/03f68e0a-0a86-48e0-9769-06c24687ffca" />
+<img width="1872" height="821" alt="image" src="https://github.com/user-attachments/assets/34510046-0883-487f-b3c8-9f510a344692" />
+<img width="1873" height="830" alt="image" src="https://github.com/user-attachments/assets/30a89ab3-9966-4eba-b04f-d72964de9c94" />
 
-#### 📂 Movie Catalog Management
-![Movie Management](https://github-production-user-asset-62135c.s3.amazonaws.com/placeholder-movies.png)
-*Instruction: Upload a screenshot of the movie listings page showing grid view and action buttons*
+
 
 ---
 
